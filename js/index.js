@@ -33,6 +33,11 @@ function resetTime() {
   clearTimeout(timeDown)
 }
 
+function bgAudio() { 
+  sounds.btnPressAudio()
+  sounds.bgAudio.pause();
+}
+
 function clockDown() {
   timeDown = setTimeout(() => {
     let minutes = Number(minutesDisplay.innerHTML);
@@ -46,7 +51,7 @@ function clockDown() {
     }
 
     if (seconds <= 0) {
-      seconds = 2;
+      seconds = 60;
       --minutes;
     }
 
@@ -77,8 +82,7 @@ btnPause.addEventListener("click", () => {
   btnSet.classList.remove("hide");
 
   clearTimeout(timeDown)
-  sounds.btnPressAudio()
-  sounds.bgAudio.pause();
+  bgAudio()
 });
 
 btnStop.addEventListener("click", () => {
@@ -86,9 +90,10 @@ btnStop.addEventListener("click", () => {
   btnPause.classList.add("hide");
   btnSet.classList.remove("hide");
   btnStop.classList.add("hide");
+
   resetControls()
   resetTime()
-  sounds.btnPressAudio()
+  bgAudio()
 });
 
 btnSet.addEventListener("click", () => {
