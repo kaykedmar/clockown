@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: #0d1127;
+}
+
+.hide { 
+  display: none;
+}
+
+
+
+main {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 50px;
+}
+
+.clock {
+  width: 390px;
+  height: 355px;
+  border-radius: 10px;
+  background-color: #171e44;
+  box-shadow: 0px 7px 10px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clock-display {
+  color: #060714;
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.clock .title {
+  color: #cccddb;
+  font-weight: bold;
+}
+
+.btnTime {
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+button { 
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+
+
+
+
